@@ -50,6 +50,8 @@ In contrast,
 */
 
 
+
+
 /*******************************************************************-********************************************************************/
 
 
@@ -89,3 +91,46 @@ Functions: Reusable block of code, defined using function keyword or as an expre
 
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myName = "OM"; // Stored in Stack (creates a copy)
+
+let anothername = myName;  // Copying the value (not reference)
+anothername = "chaiaurcode"; // Changing anothername does not affect myName
+
+console.log(myName);      // Output: OM
+console.log(anothername); // Output: chaiaurcode
+
+let userOne = {  // Stored in Heap (reference stored in Stack)
+    email: "user@google.com",
+    upi: "user@ybl"
+};
+
+let userTwo = userOne;  // userTwo gets the reference (not a copy)
+
+userTwo.email = "om@google.com"; // Modifying userTwo affects userOne
+
+console.log(userOne.email); // Output: om@google.com
+console.log(userTwo.email); // Output: om@google.com
+
+/*
+Key Interview Concepts:
+
+1️⃣- Stack Memory (Used for Primitive Data Types)
+-Stores values directly (Numbers, Strings, Booleans, etc.).
+-When assigned to another variable, a copy is created.
+-Modification does not affect the original value.
+
+2️⃣ Heap Memory (Used for Non-Primitive Data Types)
+-Stores objects in memory, while the variable holds a reference.
+-When assigned to another variable, the reference is copied, not the actual value.
+-Modification in one reference affects the original object.
+
+###Interview-Ready Summary:
+-Primitive types (String, Number, Boolean, etc.) use Stack Memory (copied by value).
+-Non-primitive types (Objects, Arrays, Functions) use Heap Memory (copied by reference).
+-Objects share the same reference, modifying one affects the other.
+*/

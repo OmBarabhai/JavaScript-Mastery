@@ -90,6 +90,51 @@ console.log(sortedArr); // Output: [0, 1, 2, 3, 4, 4, 5, 6]
 const reversedArr = myArr3.reverse();
 console.log(reversedArr); // Output: [6, 5, 4, 4, 3, 2, 1, 0]
 
+// --------------------------------------------------------------------------------------------------------
+
+// 21. Spread Operator - Expands an array into individual elements
+const numArray = [1, 2, 3];
+const newNumArray = [...numArray, 4, 5, 6];
+console.log(newNumArray); // Output: [1, 2, 3, 4, 5, 6]
+
+// 22. Rest Parameter - Collects multiple elements into an array in function arguments
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+console.log(sum(1, 2, 3, 4)); // Output: 10
+
+// 23. Deep vs. Shallow Copy
+const originalArray = [1, 2, { a: 10 }];
+const shallowCopy = originalArray.slice();
+shallowCopy[2].a = 99;
+console.log(originalArray[2].a); // Output: 99 (Shallow copy issue)
+
+// 24. flat() - Flattens a nested array
+const nestedArray = [1, [2, [3, [4]]]];
+console.log(nestedArray.flat(2)); // Output: [1, 2, 3, [4]]
+
+// 25. flatMap() - Combines map() and flat()
+const nums = [1, 2, 3];
+console.log(nums.flatMap(num => [num, num * 2])); // Output: [1, 2, 2, 4, 3, 6]
+
+// 26. Array.from() - Converts an array-like object to an array
+console.log(Array.from("Hello")); // Output: ['H', 'e', 'l', 'l', 'o']
+
+// 27. Array.of() - Creates an array from given arguments
+console.log(Array.of(1, 2, 3)); // Output: [1, 2, 3]
+
+// 28. Set() - Removes duplicate values
+const uniqueArray = [...new Set([1, 2, 2, 3, 4, 4])];
+console.log(uniqueArray); // Output: [1, 2, 3, 4]
+
+// 29. Array Destructuring - Extracting values from an array
+const [first, second, ...rest] = [10, 20, 30, 40];
+console.log(first, second, rest); // Output: 10 20 [30, 40]
+
+// 30. Typed Arrays - Handling binary data
+const typedArray = new Uint8Array([10, 20, 30]);
+console.log(typedArray); // Output: Uint8Array(3) [10, 20, 30]
+
 /*
 Explanation of Key Concepts:
 
@@ -111,6 +156,100 @@ Explanation of Key Concepts:
 16. findIndex() : Returns the index of the first element that satisfies a condition.
 17. sort() : Sorts the elements of an array in place.
 18. reverse() : Reverses the order of elements in an array.
+// -------------------------------------------------------------------------------------------------------
+Your list covers *most of the essential array concepts* for JavaScript interviews, but a few *important topics* are missing. Below are additional *must-know array concepts* that will help you crack any interview round:
+
+---
+
+*🚀 Additional Important Array Topics for Interviews:*
+1. *Spread Operator (`...`)*  
+   - Expands an array into individual elements, useful for copying and merging arrays.  
+  js
+   const arr1 = [1, 2, 3];
+   const arr2 = [...arr1, 4, 5]; // Creates a new array with arr1 elements + 4, 5
+   console.log(arr2); // Output: [1, 2, 3, 4, 5]
+  
+
+2. *Rest Parameter (`...`)*  
+   - Collects multiple function arguments into an array.  
+  js
+   function sum(...numbers) {
+       return numbers.reduce((acc, num) => acc + num, 0);
+   }
+   console.log(sum(1, 2, 3, 4)); // Output: 10
+  
+
+3. *Flat() (Flattening Nested Arrays)*  
+   - Flattens a multi-dimensional array into a single array.  
+  js
+   const nestedArr = [1, [2, 3], [4, [5, 6]]];
+   console.log(nestedArr.flat(2)); // Output: [1, 2, 3, 4, 5, 6]
+  
+
+4. *FlatMap() (Combination of `map()` + `flat()`)*  
+   - Maps each element using a function and flattens the result.  
+  js
+   const arr = [1, 2, 3];
+   console.log(arr.flatMap(num => [num, num * 2])); 
+   // Output: [1, 2, 2, 4, 3, 6]
+  
+
+5. *Fill() (Fills an array with a static value)*  
+  js
+   const arr = new Array(5).fill(0);
+   console.log(arr); // Output: [0, 0, 0, 0, 0]
+  
+
+6. *Set (Unique Elements in Arrays)*  
+   - Removes duplicate values from an array.  
+  js
+   const arr = [1, 2, 2, 3, 4, 4];
+   console.log([...new Set(arr)]); // Output: [1, 2, 3, 4]
+  
+
+7. *from() (Convert Iterables to Arrays)*  
+   - Converts a string, NodeList, or Set into an array.  
+  js
+   console.log(Array.from("hello")); // Output: ['h', 'e', 'l', 'l', 'o']
+  
+
+8. *isArray() (Check if a variable is an array)*  
+  js
+   console.log(Array.isArray([1, 2, 3])); // Output: true
+   console.log(Array.isArray("hello"));  // Output: false
+  
+
+9. *Sorting Edge Cases (Sorting Strings & Numbers)*  
+   - The default `sort()` method *does not work correctly* for numbers.  
+  js
+   const numbers = [5, 1, 10, 2];
+   console.log(numbers.sort()); // Wrong Output: [1, 10, 2, 5]
+   console.log(numbers.sort((a, b) => a - b)); // Correct Output: [1, 2, 5, 10]
+  
+
+10. *Array Destructuring (Extracting Values from Arrays)*  
+  js
+   const [a, b, ...rest] = [10, 20, 30, 40, 50];
+   console.log(a, b, rest); // Output: 10 20 [30, 40, 50]
+  
+
+---
+
+*📌Final List of Important Interview Topics on Arrays*
+
+✅ *Basic Methods:* `push()`, `pop()`, `shift()`, `unshift()`, `includes()`, `indexOf()`, `join()`  
+✅ *Extracting & Modifying:* `slice()`, `splice()`  
+✅ *Merging & Flattening:* `concat()`, `flat()`, `flatMap()`  
+✅ *Transforming & Filtering:* `map()`, `filter()`, `reduce()`  
+✅ *Looping & Iterating:* `forEach()`, `some()`, `every()`  
+✅ *Finding Elements:* `find()`, `findIndex()`  
+✅ *Sorting & Reversing:* `sort()`, `reverse()`, `fill()`  
+✅ *Other Essentials:* `isArray()`, `from()`, `Set (Unique Values)`, `Spread Operator (...)`, `Rest Parameter (...)`, `Destructuring`
+
+---
+
+*🛠 Why These Topics?*
+These topics *cover all possible interview questions* on JavaScript arrays, including *basic operations, performance optimizations, and real-world scenarios*. Mastering these concepts will *help you crack any JavaScript coding interview*. 🚀  
 
 These concepts are fundamental and frequently asked in JavaScript interviews. Understanding and practicing these methods will help you crack any interview round related to arrays in JavaScript.
 */ 

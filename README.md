@@ -19,7 +19,7 @@ I am currently learning **JavaScript** from the [Chai Aur Code YouTube Channel](
 📌 **Reference:** [Chai Aur Code - JavaScript for Beginners Playlist](https://youtu.be/sscX432bMZo?si=xqOrXubSpXvzEvF4)  
 
 ### 🌍 **Follow My Journey**  
-👨‍💻 **GitHub:** [[Your GitHub Profile Link]  (https://github.com/OmBarabhai)]
+👨‍💻 **GitHub:** [[My GitHub Profile Link] (https://github.com/OmBarabhai)]
 📢 **Learning from:** [Chai Aur Code YouTube Channel](https://www.youtube.com/channel/UCNQ6FEtztATuaVhZKCY28Yw)  
 
 Stay tuned for more updates! 🚀✨  

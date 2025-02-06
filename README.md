@@ -22,4 +22,8 @@ I am currently learning **JavaScript** from the [Chai Aur Code YouTube Channel](
 👨‍💻 **GitHub:** [[My GitHub Profile Link] (https://github.com/OmBarabhai)]
 📢 **Learning from:** [Chai Aur Code YouTube Channel](https://www.youtube.com/channel/UCNQ6FEtztATuaVhZKCY28Yw)  
 
+<<<<<<< HEAD
 Stay tuned for more updates! 🚀✨  
+=======
+Stay tuned for more updates! 🚀✨  
+>>>>>>> a395ce4dbb22389580f03ff7b2511bedd8ce3a49

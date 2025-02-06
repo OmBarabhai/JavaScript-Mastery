@@ -164,7 +164,7 @@ Your list covers *most of the essential array concepts* for JavaScript interview
 *🚀 Additional Important Array Topics for Interviews:*
 1. *Spread Operator (`...`)*  
    - Expands an array into individual elements, useful for copying and merging arrays.  
-  js
+  
    const arr1 = [1, 2, 3];
    const arr2 = [...arr1, 4, 5]; // Creates a new array with arr1 elements + 4, 5
    console.log(arr2); // Output: [1, 2, 3, 4, 5]
@@ -172,7 +172,7 @@ Your list covers *most of the essential array concepts* for JavaScript interview
 
 2. *Rest Parameter (`...`)*  
    - Collects multiple function arguments into an array.  
-  js
+ 
    function sum(...numbers) {
        return numbers.reduce((acc, num) => acc + num, 0);
    }
@@ -181,54 +181,54 @@ Your list covers *most of the essential array concepts* for JavaScript interview
 
 3. *Flat() (Flattening Nested Arrays)*  
    - Flattens a multi-dimensional array into a single array.  
-  js
+
    const nestedArr = [1, [2, 3], [4, [5, 6]]];
    console.log(nestedArr.flat(2)); // Output: [1, 2, 3, 4, 5, 6]
   
 
 4. *FlatMap() (Combination of `map()` + `flat()`)*  
    - Maps each element using a function and flattens the result.  
-  js
+
    const arr = [1, 2, 3];
    console.log(arr.flatMap(num => [num, num * 2])); 
    // Output: [1, 2, 2, 4, 3, 6]
   
 
 5. *Fill() (Fills an array with a static value)*  
-  js
+ 
    const arr = new Array(5).fill(0);
    console.log(arr); // Output: [0, 0, 0, 0, 0]
   
 
 6. *Set (Unique Elements in Arrays)*  
    - Removes duplicate values from an array.  
-  js
+
    const arr = [1, 2, 2, 3, 4, 4];
    console.log([...new Set(arr)]); // Output: [1, 2, 3, 4]
   
 
 7. *from() (Convert Iterables to Arrays)*  
    - Converts a string, NodeList, or Set into an array.  
-  js
+ 
    console.log(Array.from("hello")); // Output: ['h', 'e', 'l', 'l', 'o']
   
 
 8. *isArray() (Check if a variable is an array)*  
-  js
+
    console.log(Array.isArray([1, 2, 3])); // Output: true
    console.log(Array.isArray("hello"));  // Output: false
   
 
 9. *Sorting Edge Cases (Sorting Strings & Numbers)*  
    - The default `sort()` method *does not work correctly* for numbers.  
-  js
+
    const numbers = [5, 1, 10, 2];
    console.log(numbers.sort()); // Wrong Output: [1, 10, 2, 5]
    console.log(numbers.sort((a, b) => a - b)); // Correct Output: [1, 2, 5, 10]
   
 
 10. *Array Destructuring (Extracting Values from Arrays)*  
-  js
+
    const [a, b, ...rest] = [10, 20, 30, 40, 50];
    console.log(a, b, rest); // Output: 10 20 [30, 40, 50]
   

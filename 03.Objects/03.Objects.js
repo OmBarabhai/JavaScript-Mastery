@@ -38,6 +38,7 @@ jsUser.greetingTwo = function() {
     console.log(`Hello JS User, ${this.name}`); // 'this' refers to jsUser
 };
 
+
 console.log(jsUser.greeting()); // 🟢 Output: Hello JS User
 console.log(jsUser.greetingTwo()); // 🟢 Output: Hello JS User, Om
 

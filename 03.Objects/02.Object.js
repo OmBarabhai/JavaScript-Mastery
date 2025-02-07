@@ -99,4 +99,70 @@ Here’s a **quick revision short note** for your interview preparation on **Jav
 - `console.log(obj?.property?.nestedProperty);` // Returns `undefined` if not found  
 
 This **covers all key concepts** you need to **revise quickly before an interview**! 🚀🔥 Let me know if you need any modifications! 🎯
- */
+*/
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// 🚀 **JavaScript Objects - Interview Short Notes (Part 3)** 🚀
+
+// **1️⃣ Object Destructuring (Important for Interviews)**
+// Destructuring allows extracting properties from an object easily
+
+const course = {
+    coursename: "JS in Hindi",
+    price: "999",
+    courseInstructor: "Hitesh"
+};
+
+// ✅ Old way (Accessing properties manually)
+// console.log(course.courseInstructor); // 🟢 "Hitesh"
+
+// ✅ Modern way (Destructuring)
+const { courseInstructor: instructor } = course;
+console.log(instructor); // 🟢 "Hitesh"
+// (Renamed 'courseInstructor' to 'instructor' for easier use)
+
+// **2️⃣ JSON Structure (Common in APIs)**
+// JSON (JavaScript Object Notation) is used for data exchange in APIs
+
+const jsonData = {
+    "name": "Om",
+    "coursename": "JS in Hindi",
+    "price": "Free"
+};
+
+// ✅ Accessing JSON Data
+console.log(jsonData.name); // 🟢 "Om"
+
+// **3️⃣ Array of Objects (Very Common in Real-World Apps)**
+// Often used in APIs, Databases, and Complex Data Handling
+
+const courses = [
+    {
+        coursename: "JavaScript Basics",
+        price: "Free",
+        instructor: "Hitesh"
+    },
+    {
+        coursename: "React Advanced",
+        price: "1999",
+        instructor: "Chai Aur Code"
+    },
+    {
+        coursename: "Node.js Mastery",
+        price: "2999",
+        instructor: "Hitesh"
+    }
+];
+
+// ✅ Accessing Objects in an Array
+console.log(courses[1].coursename); // 🟢 "React Advanced"
+console.log(courses[2].price); // 🟢 "2999"
+
+// 🎯 **Key Takeaways:**
+// 🔹 Object Destructuring simplifies accessing properties.
+// 🔹 JSON is the standard data format in APIs.
+// 🔹 Arrays of Objects are widely used in real-world applications.
+

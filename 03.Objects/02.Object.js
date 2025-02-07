@@ -63,3 +63,40 @@ console.log(regularUser?.address?.city); // 🟢 Undefined (No error, safe check
 
 // 🎯 **This covers JavaScript Objects (Part 2) for Interviews!** 🎯
 // 🚀 Revise these and practice for better understanding! 🚀
+/*
+Here’s a **quick revision short note** for your interview preparation on **JavaScript Objects (Part 2):**  
+
+### 🚀 **JavaScript Objects - Quick Revision for Interviews** 🚀  
+
+✅ **Creating Objects:**  
+- `const obj = new Object();` // **Singleton Object** (Rarely used)  
+- `const obj = {};` // **Regular Object** (Preferred)  
+
+✅ **Adding & Accessing Properties:**  
+- `obj.name = "John";` → Adds a new property  
+- `console.log(obj.name);` → Access property  
+- `console.log(obj["name"]);` → Alternative way  
+
+✅ **Checking Properties:**  
+- `Object.keys(obj)` → Returns all keys (Array)  
+- `Object.values(obj)` → Returns all values (Array)  
+- `Object.entries(obj)` → Returns key-value pairs (Array)  
+- `obj.hasOwnProperty("name")` → Checks if key exists  
+
+✅ **Nested Objects:**  
+- Access deep properties → `obj.parent.child.subChild`  
+- Use **Optional Chaining (?.)** to avoid errors → `obj?.parent?.child?.subChild`  
+
+✅ **Merging Objects:**  
+- `Object.assign({}, obj1, obj2)` // **Old method**  
+- `{ ...obj1, ...obj2 }` // **Spread operator (Preferred)**  
+
+✅ **Array of Objects (Important for APIs):**  
+- `const users = [{id: 1, email: "a@gmail.com"}, {id: 2, email: "b@gmail.com"}]`  
+- `console.log(users[0].email);` // Accessing inside array  
+
+✅ **Preventing Errors (Optional Chaining `?.`)**  
+- `console.log(obj?.property?.nestedProperty);` // Returns `undefined` if not found  
+
+This **covers all key concepts** you need to **revise quickly before an interview**! 🚀🔥 Let me know if you need any modifications! 🎯
+ */

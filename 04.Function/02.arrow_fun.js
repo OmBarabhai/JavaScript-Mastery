@@ -133,11 +133,13 @@ regularArgs(1, 2, 3); // Arguments(3) [1, 2, 3]
 
 // ============== Key Differences Table ==============
 /*
-| Feature                | Arrow Functions              | Regular Functions         |
+______________________________________________________________________________________
+| Feature                | Arrow Functions               | Regular Functions         |
 |------------------------|-------------------------------|---------------------------|
 | 'this' Context         | Inherits from parent scope    | Own dynamic context       |
 | Constructor Usage      | ❌ (TypeError)               | ✅                        |
 | arguments Object       | ❌                           | ✅                        |
 | Implicit Returns       | ✅ (No {} needed)            | ❌ (Requires return)      |
-| Best For               | Callbacks, map/filter        | Object methods, prototypes|
+| Best For               | Callbacks, map/filter         | Object methods, prototypes|
+|________________________|_______________________________|___________________________|
 */

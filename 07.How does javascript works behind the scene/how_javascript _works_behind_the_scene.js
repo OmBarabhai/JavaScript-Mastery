@@ -91,8 +91,8 @@ Execution Flow:
 
 */
 
-// Example of Call Stack Working
-two();
+// Function call at the start
+two(); 
 
 function one() {
     console.log("One");
@@ -109,13 +109,20 @@ function three() {
 }
 
 /*
-Call Stack Execution:
-1. Global Execution Context is created.
-2. 'two()' is called → Execution Context for 'two' is pushed.
-3. 'console.log("Two")' executes.
-4. 'three()' is called → Execution Context for 'three' is pushed.
-5. 'console.log("Three")' executes.
-6. Execution Context for 'three' is popped.
-7. Execution Context for 'two' is popped.
-8. Global Execution Context is removed.
+Corrected Call Stack Execution:
+
+1. Global Execution Context (GEC) is created.
+2. 'two()' is called → Execution Context for 'two' is pushed onto the Call Stack.
+3. Inside 'two()':
+   - 'console.log("Two")' executes → prints "Two".
+   - 'three()' is called → Execution Context for 'three' is pushed onto the stack.
+4. Inside 'three()':
+   - 'console.log("Three")' executes → prints "Three".
+   - 'three()' completes → Execution Context for 'three' is popped.
+5. 'two()' completes → Execution Context for 'two' is popped.
+6. Global Execution Context is removed (script execution finishes).
+
+Final Output:
+Two
+Three
 */
